@@ -1,38 +1,70 @@
-# prospects_frontend (prospects_frontend)
+# Prospects Frontend
 
-## Install the dependencies
+Aplicación web desarrollada con Vue 3 y Quasar para la captura y registro de prospectos mediante la API de Prospects.
+
+## Instalación
+
+### 1. Clonar el repositorio
 
 ```bash
-pnpm install
-# or: yarn/npm/bun install
+git clone https://github.com/rocouv/prospects_frontend.git
+cd prospects_frontend
 ```
 
-### Start the app in development mode (HMR, error reporting, etc.)
+### 2. Instalar las dependencias
+
+```bash
+npm install
+```
+
+### 3. Configurar las variables de entorno
+
+Crear el archivo `.env` a partir de `.env.example`.
+```bash
+cp .env.example .env
+```
+El archivo `.env` debe contener la URL del backend:
+
+```env
+QCLI_API_URL=http://localhost:8000/api
+```
+
+## Ejecución
+
+Antes de iniciar el frontend, asegúrate de que el backend Laravel esté disponible en:
+
+```text
+http://localhost:8000
+```
+
+Después inicia Quasar:
 
 ```bash
 quasar dev
 ```
 
-### Format & Lint the files
+La aplicación estará disponible normalmente en:
 
-```bash
-pnpm run lint
-# or: yarn/npm/bun run lint
+```text
+http://localhost:9000
 ```
 
-...or just check formatting & linting:
-
-```bash
-pnpm run lint:check
-# or: yarn/npm/bun run lint:check
+```env
+QCLI_API_URL=http://localhost:8000/api
 ```
 
-### Build the app for production
+## Configuración de desarrollo
 
-```bash
-quasar build
+El frontend consume por defecto la API en:
+
+```text
+http://localhost:8000/api
 ```
 
-### Customize the configuration
+Si el backend utiliza otro host o puerto se modifica:
 
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-file).
+```env
+QCLI_API_URL=http://localhost:8000/api
+```
+
+y reinicia Quasar.
