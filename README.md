@@ -11,13 +11,18 @@ git clone https://github.com/rocouv/prospects_frontend.git
 cd prospects_frontend
 ```
 
-### 2. Instalar las dependencias
+### 2. Cambiar a la rama correspondiente
+```bash
+git checkout -b fix/validacion-prospectos
+```
+
+### 3. Instalar las dependencias
 
 ```bash
 npm install
 ```
 
-### 3. Configurar las variables de entorno
+### 4. Configurar las variables de entorno
 
 Crear el archivo `.env` a partir de `.env.example`.
 ```bash
